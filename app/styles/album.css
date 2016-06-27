@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body.album {
     background-image: url(../assets/images/blurred_backgrounds/blur_bg_3.jpg);
     background-repeat: no-repeat;
@@ -7,6 +8,8 @@ body.album {
     padding-bottom: 200px;
 }
  
+=======
+>>>>>>> 3-checkpoint
 .album-cover-art {
     position: relative;
     left: 20%;
