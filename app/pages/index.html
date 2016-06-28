@@ -8,7 +8,7 @@
      <link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
      <link rel="stylesheet" type="text/css" href="/styles/normalize.css">
      <link rel="stylesheet" type="text/css" href="/styles/main.css">
-     <link rel="stylesheet" type="text/css" href="/styles/landing.css">
+     <link rel="stylesheet" type="text/css" ui-href="/styles/landing.css">
      <link rel="stylesheet" type="text/css" href="/styles/collection.css">
      <link rel="stylesheet" type="text/css" href="/styles/album.css">
      <link rel="stylesheet" type="text/css" href="/styles/player_bar.css">
@@ -16,22 +16,18 @@
 <body>
     
     <nav class="navbar"><!-- navigation bar -->
-            <a href="index.html" class="logo">
+            <a ui-sref="index.html" class="logo">
                 <img src="bloc_jams_logo.png" alt="bloc jams logo" class="logo">
             </a>
             <div class="links-container">
-                <a href="collection.html" class="navbar-link">collection</a>
+                <a ui-sref="collection.html" class="navbar-link">collection</a>
             </div>
-        </nav>
-    
-<<<<<<< HEAD
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
-=======
-    <ui-view></</ui-view>
+    </nav>
+
+    <ui-view></ui-view>
     
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
->>>>>>> 3-checkpoint
     <script src="/scripts/app.js"></script>
 </body>
 </html>

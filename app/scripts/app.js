@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-angular.module('blocJams', []);
-=======
+
 angular.module('blocJams', []);
 
 (function() {
@@ -18,6 +16,10 @@ angular.module('blocJams', []);
         .state('album', {
             url: '/album',
             templateUrl: '/templates/album.html'
+        })
+        .state('collection', {
+            url: '/collection',
+            templateUrl: '/templates/collection.html'
         });
 
 }
@@ -27,4 +29,3 @@ angular.module('blocJams', []);
         .module('blocJams', ['ui.router'])
         .config(config);
 })();
->>>>>>> 3-checkpoint

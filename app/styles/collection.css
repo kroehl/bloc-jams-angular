@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-body.collection {
-    background-image: url(../assets/images/blurred_backgrounds/blur_bg_2.jpg);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center center;
-    background-size: cover;
-}
- 
-=======
->>>>>>> 3-checkpoint
 .album-covers {
     position: relative;
 }
