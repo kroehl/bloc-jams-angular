@@ -21,7 +21,7 @@ angular.module('blocJams', []);
         })
         .state('collection', {
             url: '/collection',
-            controller: 'Collection as collection',
+            controller: 'CollectionCtrl as collection',
             templateUrl: '/templates/collection.html'
         });
 
