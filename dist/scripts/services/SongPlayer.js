@@ -1,7 +1,10 @@
 (function() {
     function SongPlayer() {
         var SongPlayer = {};
-        
+        /**
+        * @desc song object currently playing
+        * @type {Object}
+        */
         var currentSong = null;
         
         /**
@@ -23,31 +26,47 @@
             }
             
             currentBuzzObject = new buzz.sound(song.audioUrl, {
-                formats: ['mps'],
+                formats: ['mp3'],
                 preload: true
             });
             //set newly chosen song as current
-            currentSong = song
+            currentSong = song;
         };
-        
+        /**
+        * @function playSong
+        * @description Plays the audio file that is set as the currentBuzzObject and updates boolean
+        * @param {Object} song
+        */
+        var playSong = function(song){
+            currentBuzzObject.play();
+            song.playing = true;
+        }
+        /**
+        *@function play
+        *@description Creates a new Buzz object and calls play method on object
+        * @param {Object} song
+        */
         SongPlayer.play = function(song) {
             //if the currently playing song is not the song clicked
             if (currentSong !== song) {
-                
                 setSong(song);
                 //play song
-                currentBuzzObject.play(); 
-                song.playing = true;
+                playSong(song);
+                
             //if currently playing song is the song clicked
             } else if (currentSong === song){
                 //check to see if song is paused and play
                 if (currentBuzzObject.isPaused()){
-                    currentBuzzObject.play();
+                    playSong(song);
                 }
             }
             
         };
-        
+        /**
+        *@function pause
+        *@description Calls pause method on object and updates boolean
+        * @param {Object} song
+        */
         SongPlayer.pause = function(song){
             currentBuzzObject.pause();
             song.playing = false;
