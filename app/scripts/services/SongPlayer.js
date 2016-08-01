@@ -71,7 +71,11 @@
         * @type {Number}
         */
         SongPlayer.currentTime = null;
-        
+        /*
+        * @desc volume of current song
+        * @type {object}
+        */
+        SongPlayer.volume = null;
         /**
         *@function play
         *@description Creates a new Buzz object and calls play method on object
@@ -148,6 +152,13 @@
                 currentBuzzObject.setTime(time);
             }
         };
+        
+        SongPlayer.setVolume = function (volume){
+            if (currentBuzzObject) {
+                currentBuzzObject.setVolume(volume);
+            }
+        };
+        
         
         
         return SongPlayer;
