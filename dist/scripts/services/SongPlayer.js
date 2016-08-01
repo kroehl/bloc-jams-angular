@@ -159,6 +159,9 @@
             }
         };
         
+        SongPlayer.mute = function () {
+           currentBuzzObject.setVolume(0);
+        };
         
         
         return SongPlayer;
