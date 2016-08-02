@@ -157,9 +157,17 @@
             if (currentBuzzObject) {
                 currentBuzzObject.setVolume(volume);
             }
+            
+            currentBuzzObject.bind("volumechange", function () {
+                $rootScope.$apply(function() {
+                    SongPlayer.currentVolume = currentBuzzObject.getVolume();
+                });
+            })
         };
         
-        
+        SongPlayer.mute = function () {
+           currentBuzzObject.setVolume(0);;
+        }; 
         
         return SongPlayer;
     }
