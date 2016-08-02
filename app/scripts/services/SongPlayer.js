@@ -29,7 +29,8 @@
             
             currentBuzzObject.bind('timeupdate', function() {
                 $rootScope.$apply(function() {
-                    SongPlayer.currentTime = buzz.toTimer(currentBuzzObject.getTime());
+                    var timer = buzz.toTimer(currentBuzzObject.getTime());
+                    SongPlayer.currentTime = timer;
                 });
             });
             //set newly chosen song as current
