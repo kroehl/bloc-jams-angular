@@ -29,7 +29,7 @@
             
             currentBuzzObject.bind('timeupdate', function() {
                 $rootScope.$apply(function() {
-                    var timer = buzz.toTimer(currentBuzzObject.getTime());
+                    var timer = currentBuzzObject.getTime();
                     SongPlayer.currentTime = timer;
                 });
             });
@@ -71,7 +71,7 @@
         * @desc Current playback time (in seconds) of currently playing song
         * @type {Number}
         */
-        SongPlayer.currentTime = buzz.toTimer(null);
+        SongPlayer.currentTime = null;
         /*
         * @desc volume of current song
         * @type {object}

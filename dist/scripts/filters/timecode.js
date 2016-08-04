@@ -1,6 +1,8 @@
 (function() {
     function timecode() {
         return function(seconds) {
+            return buzz.toTimer(seconds);
+            /*
             var seconds = Number.parseFloat(seconds);
             
             //if (Number.isNaN(seconds)) {
@@ -19,6 +21,7 @@
             output += remainingSeconds;
             
             return output;
+            */
         };
     }
  
